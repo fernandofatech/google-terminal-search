@@ -4,7 +4,7 @@ apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
   name: tool-google-terminal-search
-  description: CLI utility for Google search from the terminal, maintained as part of Fernando Moretes public engineering portfolio.
+  description: "CLI utility for Google search from the terminal, maintained as part of Fernando Moretes public engineering portfolio."
   annotations:
     github.com/project-slug: fernando-moretes/tool-google-terminal-search
     backstage.io/source-location: url:https://github.com/fernando-moretes/tool-google-terminal-search
@@ -17,7 +17,9 @@ metadata:
       title: SonarQube
     - url: https://defectdojo.home.lab/product?name=tool-google-terminal-search
       title: DefectDojo
-  tags: [tool, ci-generic.yml]
+  # tags so aceitam [a-z0-9-]: ci-generic.yml (ci-node.yml) tem ponto e reprovava
+  # todo componente na policy check do Backstage.
+  tags: [tool, generic]
 spec:
   type: tool
   lifecycle: production
