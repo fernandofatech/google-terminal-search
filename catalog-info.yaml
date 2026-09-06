@@ -1,0 +1,25 @@
+# Gerado por fernando-moretes/platform. Não edite aqui: mude no orquestrador e
+# rode `make rollout`. É o que o Backstage (backstage.home.lab) lê deste repo.
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: tool-google-terminal-search
+  description: CLI utility for Google search from the terminal, maintained as part of Fernando Moretes public engineering portfolio.
+  annotations:
+    github.com/project-slug: fernando-moretes/tool-google-terminal-search
+    backstage.io/source-location: url:https://github.com/fernando-moretes/tool-google-terminal-search
+    sonarqube.org/project-key: tool-google-terminal-search
+  links:
+    - url: https://github.com/fernando-moretes/tool-google-terminal-search/actions
+      title: Actions
+      icon: github
+    - url: https://sonarqube.home.lab/dashboard?id=tool-google-terminal-search
+      title: SonarQube
+    - url: https://defectdojo.home.lab/product?name=tool-google-terminal-search
+      title: DefectDojo
+  tags: [tool, ci-generic.yml]
+spec:
+  type: tool
+  lifecycle: production
+  owner: group:plataforma
+  system: homelab
