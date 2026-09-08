@@ -7,12 +7,16 @@
  */
 workspace "tool-google-terminal-search" "CLI utility for Google search from the terminal, maintained as part of Fernando Moretes public engineering portfolio." {
 
+    configuration {
+        scope softwaresystem
+    }
+
     model {
         usuario = person "Usuário"
         sistema = softwareSystem "tool-google-terminal-search" "CLI utility for Google search from the terminal, maintained as part of Fernando Moretes public engineering portfolio." {
             app = container "Aplicação" "Descreva o que roda aqui" "ci-generic.yml"
         }
-        usuario -> sistema.app "Usa"
+        usuario -> sistema.app "Usa" "HTTPS"
     }
 
     views {
@@ -25,9 +29,19 @@ workspace "tool-google-terminal-search" "CLI utility for Google search from the 
             autoLayout lr
         }
         styles {
-            element "Person" { shape person; background #08427b; color #ffffff }
-            element "Software System" { background #1168bd; color #ffffff }
-            element "Container" { background #438dd5; color #ffffff }
+            element "Person" {
+                shape person
+                background #08427b
+                color #ffffff
+            }
+            element "Software System" {
+                background #1168bd
+                color #ffffff
+            }
+            element "Container" {
+                background #438dd5
+                color #ffffff
+            }
         }
     }
 }
